@@ -10,6 +10,7 @@ header nav  {
 	display: block;
 	margin: 0 auto 0 auto;
 	text-align: center;
+	width: 700px;
 }
 
 header {
@@ -18,8 +19,12 @@ header {
 	pointer-events: none;
 }
 
-a.nav-item {
-	margin-top: -45px;
+.nav-item {
+	padding-top: 35px;
+}
+
+.logo_container {
+	display: inline-block;
 }
 
 .logo_container img {
