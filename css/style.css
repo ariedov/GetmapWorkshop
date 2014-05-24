@@ -84,3 +84,22 @@ footer #socials {
 	width: 260px;
 	margin: 0 auto;
 }
+
+.social {
+	position: relative;
+}
+
+.social_fg {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.social:hover .social_bg {
+	visibility: hidden;	
+}
+
+.social:hover .social_fg {
+	visibility: visible;
+}
