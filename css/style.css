@@ -35,4 +35,21 @@ a.nav-item {
 
 .art_elem a {
 	display: inline-block;
+	position: relative;
+}
+
+.art_bg {
+	display: block;
+}
+
+.art_fg {
+	visibility: hidden;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.art_elem:hover .art_fg {
+	visibility: visible;
 }
