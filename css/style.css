@@ -103,3 +103,144 @@ footer #socials {
 .social:hover .social_fg {
 	visibility: visible;
 }
+
+.text {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-decoration: none;
+}
+
+.text .ukr,
+.text .ukr1,
+.text .ukr2 {
+	color: #482b1f;
+}
+
+.text .eng, 
+.text .eng1 {
+	color: white;
+}
+
+.text p {
+	margin: 0;
+}
+
+#sculpture .text {
+	margin-top: 50px;
+	margin-left: 40px;
+}
+
+#sculpture .text .eng {
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+#wall_painting .text {
+	margin-top: 85px;	
+	margin-left: 50px;
+}
+
+#wall_painting .text .eng {
+	margin-top: 10px;
+	margin-left: 65px;
+}
+
+#wall_painting .text .ukr1 {
+	margin-left: 10px;
+}
+
+#wall_painting .text .eng1 {
+	margin-left: 60px;
+}
+
+#painting .text {
+	margin-left: 40px;	
+	margin-top: 70px;
+}
+
+#painting .text .ukr {
+	margin-left: 60px;
+}
+
+#painting .text .eng1 {
+	margin-top: 15px;
+	margin-left: 35px;
+}
+
+#molding .text {
+	margin-top: 40px;
+	margin-left: 45px;
+}
+
+#molding .text .ukr {
+	margin-left: 55px;
+}
+
+#molding .text .eng {
+	margin-left: 65px;
+}
+
+#molding .text .ukr1 {
+	margin-top: 15px;
+}
+
+#molding .text .eng1 {
+	margin-left: 40px;
+}
+
+#graphics .text {
+	margin-left: 65px;
+	margin-top: 70px;
+}
+
+#graphics .text .eng {
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+#design .text {
+	margin-top: 75px;
+	margin-left: 45px;
+}
+
+#design .text .ukr {
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+#art .text {
+	margin-top: 40px;
+	margin-left: 35px;
+}
+
+#art .text .ukr {
+	margin-left: 55px;
+	margin-bottom: 10px;
+}
+
+#art .text .ukr1 {
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+#creative_bee .text {
+	margin-top: 35px;
+	margin-left: 15px;
+}
+
+#creative_bee .text .ukr1 {
+	margin-top: 20px;
+	margin-left: 55px;
+}
+
+#creative_bee .text .eng {
+	margin-top: 5px;
+	margin-left: 75px;
+}
+
+#creative_bee .text .eng1 {
+	margin-top: 5px;
+	margin-left: 35px;
+}
