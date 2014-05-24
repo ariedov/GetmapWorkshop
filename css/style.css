@@ -72,3 +72,15 @@ nav a {
 .art_elem:hover .art_fg {
 	visibility: visible;
 }
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 80px;
+	left: 0;
+}
+
+footer #socials {
+	width: 260px;
+	margin: 0 auto;
+}
