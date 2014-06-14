@@ -8,6 +8,11 @@ body {
 	height: 100%:
 }
 
+a:active,
+a:focus {
+	outline: none;
+}
+
 #main_container,
 #gallery {
 	position: absolute;
