@@ -16,7 +16,7 @@ window.onload = function() {
 
 	images.click(function(ev) {
 		currentIndex = images.index(this);	
-		var imgSrc = $(this).attr("src");	
+		var imgSrc = $(this).attr("data-full");	
 		bigImage.fadeOut(400, function() {
 			bigImage.attr("src", imgSrc);
 			bigImage.fadeIn();
@@ -30,7 +30,7 @@ window.onload = function() {
 		currentIndex += 1;
 		var currentImg = images[currentIndex];
 		if (currentImg != undefined) {
-			var imgSrc = $(currentImg).attr("src");
+			var imgSrc = $(currentImg).attr("data-full");
 			bigImage.fadeOut(400, function() {
 				bigImage.attr("src", imgSrc);
 				bigImage.fadeIn();
