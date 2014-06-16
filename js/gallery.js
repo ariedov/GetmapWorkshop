@@ -28,6 +28,9 @@ window.onload = function() {
 
 	bigImage.click(function(ev) {
 		currentIndex += 1;
+		if (currentIndex >= images.length) {
+			currentIndex = 0;
+		}
 		var currentImg = images[currentIndex];
 		if (currentImg != undefined) {
 			var imgSrc = $(currentImg).attr("data-full");
