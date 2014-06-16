@@ -41,6 +41,10 @@ a:focus {
 	margin: auto;
 }
 
+#gallery .album img {
+	display: none;
+}
+
 #image_container {
 	position: relative;
 	margin: 0 auto;
@@ -59,6 +63,7 @@ a:focus {
 	max-height: 100px;
 	max-width: 100px;
 	margin: 5px;
+	cursor: pointer;
 }
 
 header nav  {
@@ -199,21 +204,21 @@ footer #socials {
 	margin-top: 20px;
 }
 
-#wall_painting .text {
+#wpaint .text {
 	margin-top: 85px;	
 	margin-left: 50px;
 }
 
-#wall_painting .text .eng {
+#wpaint .text .eng {
 	margin-top: 10px;
 	margin-left: 65px;
 }
 
-#wall_painting .text .ukr1 {
+#wpaint .text .ukr1 {
 	margin-left: 10px;
 }
 
-#wall_painting .text .eng1 {
+#wpaint .text .eng1 {
 	margin-left: 60px;
 }
 
