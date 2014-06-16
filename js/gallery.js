@@ -4,36 +4,17 @@ window.onload = function() {
 	var images = [];
 	var currentIndex = 0;
 
-	$("#sculpture.art_elem a").click(function(ev) {
+	$(".art_elem a").click(function(ev) {
 		currentIndex = 0;
-		images = $("#gsculpture.album img");
-		images.show();
-
+		var id = "#g" + $(this).parent("div").attr("id");
+		images = $(id + ".album img");
 		var image = images[currentIndex];
-		bigImage.attr("src", $(image).attr("data-full"));
-
-		images.click(function(ev) {
-			currentIndex = images.index(this);	
-			var imgSrc = $(this).attr("data-full");	
-			bigImage.fadeOut(400, function() {
-				bigImage.attr("src", imgSrc);
-				bigImage.fadeIn();
-				return false;
-			});
+		if (image === undefined) {
 			return false;
-		});
-
-		$("#gallery").fadeIn(1000);
-		return false;
-	});
-
-	$("#wpaint.art_elem a").click(function(ev) {
-		currentIndex = 0;
-		images = $("#gwpaint.album img");
+		}
 		images.show();
-
-		var image = images[currentIndex];
 		bigImage.attr("src", $(image).attr("data-full"));
+
 		images.click(function(ev) {
 			currentIndex = images.index(this);	
 			var imgSrc = $(this).attr("data-full");	
