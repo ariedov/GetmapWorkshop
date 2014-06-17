@@ -312,7 +312,7 @@ footer #socials {
 	margin-left: 35px;
 }
 
-@media screen and (max-width: 1980px) {
+@media screen and (max-width: 2560px) {
 	.art_elem img {
 		width: 300px;
 		height: 300px;
@@ -337,7 +337,7 @@ footer #socials {
 	}
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
 	.art_elem img {
 		width: 200px;
 		height: 200px;
