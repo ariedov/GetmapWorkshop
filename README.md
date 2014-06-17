@@ -1,4 +1,4 @@
 GetmapWorkshop
 ==============
 
-A site for friend.
+An art studio, that provides different types of art services.
