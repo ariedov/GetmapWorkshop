@@ -25,7 +25,7 @@ a:focus {
 
 #gallery {
 	z-index: 10;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.85);
 	height: 100%;
 	display: none;
 	text-align: center;
@@ -33,7 +33,7 @@ a:focus {
 
 #gallery #content {
 	position: absolute;
-	top: 60px;
+	top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
