@@ -13,7 +13,7 @@ a:focus {
 	outline: none;
 }
 
-#content {
+#contacts_content {
 	width: 828px;
 	height: 516px;
 	background-image: url("../img/contacts_bg.png");
