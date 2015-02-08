@@ -13,6 +13,14 @@ a:focus {
 	outline: none;
 }
 
+#content {
+	width: 828px;
+	height: 516px;
+	background-image: url("../img/contacts_bg.png");
+	margin: 0 auto;
+	position:relative;
+}
+
 #main_container,
 #gallery {
 	position: absolute;
@@ -138,11 +146,16 @@ nav a {
 
 footer {
 	width: 100%;
-	position: relative;
 }
 
 footer #socials {
 	margin: 0 auto;
+}
+
+#contacts_footer {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 30px;
 }
 
 .social {
@@ -344,7 +357,7 @@ footer #socials {
 	footer {
 		margin-top: 50px;
 	}
-	
+
 	#socials {
 		width: 440px;
 	}
@@ -405,5 +418,4 @@ footer #socials {
 	#big_image {
 		max-height: 430px;
 	}
-
 } 
