@@ -155,7 +155,16 @@ footer #socials {
 #contacts_footer {
 	position: absolute;
 	bottom: 0;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+}
+
+#contact_info {
+	padding-top: 160px;
+}
+
+#contact_info p {
+	text-align: center;
+	vertical-align: middle;
 }
 
 .social {
