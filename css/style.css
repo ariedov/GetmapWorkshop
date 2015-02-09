@@ -13,6 +13,10 @@ a:focus {
 	outline: none;
 }
 
+p {
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+}
+
 #contacts_content {
 	width: 828px;
 	height: 516px;
