@@ -7,23 +7,15 @@ $(document).ready(function() {
 	var invisibleImage = $(".workshop_image.hidden");
 
 	var changePhoto = function() {
-		currentImageIndex += 1;
-		if (currentImageIndex == imageCount) {
-			currentImageIndex = 0;
-		}
+		var nextImageIndex = (currentImageIndex + 1) % imageCount;
+		visibleImage.attr('src', "img/workshop/" + currentImageIndex + ".png");
+		invisibleImage.attr('src', "img/workshop/" + nextImageIndex + ".png");
 
-		visibleImage.fadeOut(500);
-		invisibleImage.fadeIn(500);
+		invisibleImage.hide();
+		invisibleImage.fadeIn(3000);
 
-		var tmp = visibleImage;
-		visibleImage = invisibleImage;
-		invisibleImage = tmp;
-
-		var imageUrl = "img/workshop/" + currentImageIndex + ".png";
-		visibleImage.attr('src', imageUrl);
-
-		setTimeout(changePhoto, 4000);	
+		currentImageIndex = nextImageIndex;
 	};
 
-	setTimeout(changePhoto, 4000);
+	setInterval(changePhoto, 4000);
 });
