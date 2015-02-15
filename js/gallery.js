@@ -16,7 +16,7 @@ $(document).ready(function() {
 		bigImage.attr("src", $(image).attr("data-full"));
 
 		images.click(function(ev) {
-			currentIndex = images.index(this);	
+			currentIndex = $(this).index();	
 			var imgSrc = $(this).attr("data-full");	
 			bigImage.fadeOut(400, function() {
 				bigImage.attr("src", imgSrc);
@@ -38,10 +38,7 @@ $(document).ready(function() {
 
 
 	bigImage.click(function(ev) {
-		currentIndex += 1;
-		if (currentIndex >= images.length) {
-			currentIndex = 0;
-		}
+		currentIndex = (currentIndex + 1) % images.length;
 		var currentImg = images[currentIndex];
 		if (currentImg != undefined) {
 			var imgSrc = $(currentImg).attr("data-full");
