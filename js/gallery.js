@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
 
 	var bigImage = $("#image_container img");
 	var images = [];
@@ -53,4 +53,4 @@ window.onload = function() {
 		}
 		return false;
 	});
-}
+});

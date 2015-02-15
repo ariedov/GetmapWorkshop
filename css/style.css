@@ -25,6 +25,30 @@ p {
 	position:relative;
 }
 
+#workshop_image_container {
+	position: relative;
+	height: 200px;
+}
+
+
+.workshop_image {
+	width: 825px;
+	height: 200px;
+	position: absolute;
+}
+
+.workshop_image.hidden {
+	display: none;
+}
+
+.workshop_image.visible {
+	display: inline;
+}
+
+#workshop_description {
+	text-align: center;
+}
+
 #main_container,
 #gallery {
 	position: absolute;
