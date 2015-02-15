@@ -9,10 +9,10 @@ $(document).ready(function() {
 	var changePhoto = function() {
 		var nextImageIndex = (currentImageIndex + 1) % imageCount;
 		visibleImage.attr('src', "img/workshop/" + currentImageIndex + ".png");
-		invisibleImage.attr('src', "img/workshop/" + nextImageIndex + ".png");
-
-		invisibleImage.hide();
-		invisibleImage.fadeIn(3000);
+		invisibleImage.fadeOut(0, function() {
+			invisibleImage.attr('src', "img/workshop/" + nextImageIndex + ".png");
+			invisibleImage.fadeIn(3000);
+		});
 
 		currentImageIndex = nextImageIndex;
 	};
