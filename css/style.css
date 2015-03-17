@@ -58,6 +58,12 @@ p {
 	width: 100%;
 }
 
+.not_implemented_yet {
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 150px;
+}
+
 #gallery {
 	z-index: 10;
 	background: rgba(0, 0, 0, 0.85);
