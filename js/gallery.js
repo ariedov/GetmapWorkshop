@@ -31,6 +31,7 @@ $(document).ready(function() {
 	});
 
 	$("#gallery").click(function(ev) {
+		bigImage.attr("src", "");
 		images.hide();
 		$("#gallery").hide();	
 		return false;
