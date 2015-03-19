@@ -18,6 +18,7 @@ $(document).ready(function() {
 			currentIndex = $(this).index();	
 			var imgSrc = $(this).attr("data-full");	
 			bigImage.fadeOut(400, function() {
+				bigImage.attr("src", "");
 				bigImage.attr("src", imgSrc);
 				bigImage.fadeIn();
 				return false;
@@ -44,6 +45,7 @@ $(document).ready(function() {
 		if (currentImg != undefined) {
 			var imgSrc = $(currentImg).attr("data-full");
 			bigImage.fadeOut(400, function() {
+				bigImage.attr("src", "");
 				bigImage.attr("src", imgSrc);
 				bigImage.fadeIn();
 				return false;
