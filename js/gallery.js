@@ -5,7 +5,6 @@ $(document).ready(function() {
 	var currentIndex = 0;
 
 	$(".art_elem a").click(function(ev) {
-		currentIndex = 0;
 		var id = "#g" + $(this).parent("div").attr("id");
 		images = $(id + ".album img");
 		var image = images[currentIndex];
@@ -31,6 +30,7 @@ $(document).ready(function() {
 	});
 
 	$("#gallery").click(function(ev) {
+		currentIndex = 0;
 		bigImage.attr("src", "");
 		images.hide();
 		$("#gallery").hide();	
