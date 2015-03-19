@@ -18,7 +18,7 @@ $(document).ready(function() {
 			currentIndex = $(this).index();	
 			var imgSrc = $(this).attr("data-full");	
 			bigImage.fadeOut(400, function() {
-				bigImage.attr("src", "");
+				bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
 				bigImage.attr("src", imgSrc);
 				bigImage.fadeIn();
 				return false;
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 	$("#gallery").click(function(ev) {
 		currentIndex = 0;
-		bigImage.attr("src", "");
+		bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
 		images.hide();
 		$("#gallery").hide();	
 		return false;
@@ -45,7 +45,7 @@ $(document).ready(function() {
 		if (currentImg != undefined) {
 			var imgSrc = $(currentImg).attr("data-full");
 			bigImage.fadeOut(400, function() {
-				bigImage.attr("src", "");
+				bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
 				bigImage.attr("src", imgSrc);
 				bigImage.fadeIn();
 				return false;
