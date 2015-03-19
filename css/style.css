@@ -21,6 +21,8 @@ p {
 	width: 911px;
 	height: 568px;
 	background-image: url("../img/contacts_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 	margin: 0 auto;
 	position:relative;
 }
