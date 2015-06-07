@@ -214,6 +214,11 @@ footer #socials {
 	margin: 0 auto;
 }
 
+#all_rights_reserved {
+	position: absolute;
+	bottom: 0;
+}
+
 #contacts_footer {
 	position: absolute;
 	bottom: 0;
