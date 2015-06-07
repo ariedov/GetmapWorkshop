@@ -96,6 +96,25 @@ p {
 	margin: 0 auto;
 }
 
+#image_content {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+#image_caption {
+	position: absolute;
+	text-align: right;
+	bottom: 0;
+	right: 0;
+}
+
+#image_caption p {
+	background-color: rgba(100, 100, 100, 0.8);
+	padding: 10px 10px 10px 10px;
+	font-size: 10pt;	
+}
+
 .album {
 	margin: 0 auto;
 }
