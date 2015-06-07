@@ -365,59 +365,6 @@ footer #socials {
 @media screen and (max-width: 2560px) {
 
 	header nav {
-		width: 1386;
-	}
-
-	.logo_container img {
-		margin-top: -108px;
-		width: 429px;
-		height: 429px;
-	}
-
-	.art_elem img {
-		width: 396px;
-		height: 396px;
-	}
-	
-	.social .social_bg {
-		width: 66px;
-		height: 66px;
-	}
-
-	.social .social_fg {
-		width: 83px;
-		height: 83px;
-	}
-	
-	#main_table {
-		margin-top: -187px;
-		width: 1634px;
-	}
-
-	#main_table .row {
-		margin-top: 10px;
-	}
-
-	footer {
-		margin-top: 55px;
-	}
-
-	#socials {
-		width: 484px;
-	}
-
-	#image_container {
-		height: 851px;
-	}
-
-	#big_image {
-		max-height: 851px;
-	}
-}
-
-@media screen and (max-width: 1600px) {
-
-	header nav {
 		width: 770px;
 	}
 
