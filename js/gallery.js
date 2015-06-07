@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	var bigImage = $("#image_container img");
+	var imageCaption = $("#image_caption p");
 	var images = [];
 	var currentIndex = 0;
 
@@ -13,6 +14,7 @@ $(document).ready(function() {
 		}
 		images.show();
 		bigImage.attr("src", $(image).attr("data-full"));
+		imageCaption.text($(image).attr("data-caption"));
 
 		images.click(function(ev) {
 			currentIndex = $(this).index();	
@@ -44,9 +46,11 @@ $(document).ready(function() {
 		var currentImg = images[currentIndex];
 		if (currentImg != undefined) {
 			var imgSrc = $(currentImg).attr("data-full");
+			var imgCaption = $(currentImg).attr("data-caption");
 			bigImage.fadeOut(400, function() {
 				bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
 				bigImage.attr("src", imgSrc);
+				imageCaption.text(imgCaption);
 				bigImage.fadeIn();
 				return false;
 			});
