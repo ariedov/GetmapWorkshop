@@ -116,6 +116,10 @@ p {
 	font-size: 10pt;
 }
 
+#image_caption a {color:#87cefa;}          /* unvisited link */
+#image_caption a:visited {color:#87cefa;}  /* visited link */
+
+
 .album {
 	margin: 0 auto;
 }
