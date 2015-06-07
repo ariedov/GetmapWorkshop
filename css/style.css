@@ -107,12 +107,13 @@ p {
 	text-align: left;
 	top: 0;
 	left: 0;
+	max-width: 30%;
 }
 
 #image_caption p {
 	background-color: rgba(100, 100, 100, 0.8);
 	padding: 10px 10px 10px 10px;
-	font-size: 10pt;	
+	font-size: 10pt;
 }
 
 .album {
