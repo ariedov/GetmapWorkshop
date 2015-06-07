@@ -5,6 +5,10 @@ $(document).ready(function() {
 	var images = [];
 	var currentIndex = 0;
 
+	$("#image_caption").click(function() {
+		return false;
+	});
+
 	$(".art_elem a").click(function(ev) {
 		var id = "#g" + $(this).parent("div").attr("id");
 		images = $(id + ".album img");
