@@ -53,8 +53,7 @@ p {
 	text-align: left;
 }
 
-#main_container,
-#gallery {
+#main_container {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -67,14 +66,6 @@ p {
 	text-align: center;
 	margin-top: 200px;
 	margin-bottom: 150px;
-}
-
-#gallery {
-	z-index: 10;
-	background: rgba(0, 0, 0, 0.85);
-	height: 100%;
-	display: none;
-	text-align: center;
 }
 
 #gallery #content {
