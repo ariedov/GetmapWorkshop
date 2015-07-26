@@ -1,56 +1,43 @@
 $(document).ready(function() {
-
-	var bigImage = $("#image_container img");
-	var images = [];
-	var currentIndex = 0;
-
-	$(".art_elem a").click(function(ev) {
-		var id = "#g" + $(this).parent("div").attr("id");
-		images = $(id + ".album img");
-		var image = images[currentIndex];
-		if (image === undefined) {
-			return false;
-		}
-		images.show();
-		bigImage.attr("src", $(image).attr("data-full"));
-
-		images.click(function(ev) {
-			currentIndex = $(this).index();	
-			var imgSrc = $(this).attr("data-full");	
-			bigImage.fadeOut(400, function() {
-				bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
-				bigImage.attr("src", imgSrc);
-				bigImage.fadeIn();
-				return false;
-			});
-			return false;
-		});
-
-		$("#gallery").fadeIn(1000);
-		return false;
+	var $graphics = $(".ggraphics").colorbox({rel: "ggraphics"});
+	$("#graphics a").click(function(e) {
+		e.preventDefault();
+		$graphics.eq(0).click();
 	});
 
-	$("#gallery").click(function(ev) {
-		currentIndex = 0;
-		bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
-		images.hide();
-		$("#gallery").hide();	
-		return false;
+	var $molding = $(".gmolding").colorbox({rel: "gmolding"});
+	$("#molding a").click(function(e) {
+		e.preventDefault();
+		$molding.eq(0).click();
 	});
 
+	var $painting = $(".gpainting").colorbox({rel: "gpainting"});
+	$("#painting a").click(function(e) {
+		e.preventDefault();
+		$painting.eq(0).click();
+	});
 
-	bigImage.click(function(ev) {
-		currentIndex = (currentIndex + 1) % images.length;
-		var currentImg = images[currentIndex];
-		if (currentImg != undefined) {
-			var imgSrc = $(currentImg).attr("data-full");
-			bigImage.fadeOut(400, function() {
-				bigImage.attr('src','data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAA‌​LAAAAAABAAEAAAICRAEAOw%3D%3D');
-				bigImage.attr("src", imgSrc);
-				bigImage.fadeIn();
-				return false;
-			});
-		}
-		return false;
+	var $design = $(".gdesign").colorbox({rel: "gdesign"});
+	$("#design a").click(function(e) {
+		e.preventDefault();
+		$design.eq(0).click();
+	});
+
+	var $art = $(".gart").colorbox({rel: "gart"});
+	$("#art a").click(function(e) {
+		e.preventDefault();
+		$art.eq(0).click();
+	});
+
+	$sculpture = $(".gsculpture").colorbox({rel: "gsculpture"});
+	$("#sculpture a").click(function(e) {
+		e.preventDefault();
+		$sculpture.eq(0).click();
+	});
+
+	$wpaint = $(".gwpaint").colorbox({rel: "gwpaint"});
+	$("#wpaint a").click(function(e) {
+		e.preventDefault();
+		$wpaint.eq(0).click();
 	});
 });

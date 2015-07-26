@@ -8,6 +8,9 @@ body {
 	height: 100%:
 }
 
+a {color:#0000FF;}      /* unvisited link */
+a:visited {color:#0000FF;}  /* visited link */
+
 a:active,
 a:focus {
 	outline: none;
@@ -46,12 +49,11 @@ p {
 .workshop_image.visible {
 }
 
-#workshop_description {
-	text-align: center;
+#workshop_description p {
+	text-align: left;
 }
 
-#main_container,
-#gallery {
+#main_container {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -64,14 +66,6 @@ p {
 	text-align: center;
 	margin-top: 200px;
 	margin-bottom: 150px;
-}
-
-#gallery {
-	z-index: 10;
-	background: rgba(0, 0, 0, 0.85);
-	height: 100%;
-	display: none;
-	text-align: center;
 }
 
 #gallery #content {
@@ -92,6 +86,30 @@ p {
 	position: relative;
 	margin: 0 auto;
 }
+
+#image_content {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+#image_caption {
+	position: absolute;
+	text-align: left;
+	top: 0;
+	left: 0;
+	max-width: 30%;
+}
+
+#image_caption p {
+	background-color: rgba(100, 100, 100, 0.8);
+	padding: 10px 10px 10px 10px;
+	font-size: 10pt;
+}
+
+#image_caption a {color:#87cefa;}          /* unvisited link */
+#image_caption a:visited {color:#87cefa;}  /* visited link */
+
 
 .album {
 	margin: 0 auto;
@@ -185,6 +203,12 @@ footer {
 
 footer #socials {
 	margin: 0 auto;
+}
+
+#all_rights_reserved {
+	position: absolute;
+	bottom: 0;
+	font-size: 9pt;
 }
 
 #contacts_footer {
