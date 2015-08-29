@@ -35,7 +35,8 @@
 			</header>
 
 			<div id="main_table">
-				<p class="not_implemented_yet">Ще не зроблено...</p>
+				<p class="not-not_implemented_yet-yet success" style="display: none;"></p>
+				<p class="not_implemented_yet error" style="display:none;">Error happened.</a>
 			</div>
 
 			<footer>
@@ -74,5 +75,23 @@
 			</footer>
 			<div id="all_rights_reserved">© Художня майстерня "Гетьман" 2008–2015 Копіювання матеріалів дозволяється лише з посиланням на джерело</div>
 		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/parse-1.5.0.js"></script>
+		<script type="text/javascript">
+			Parse.initialize("MbW4yrekRDJBgv4Jso9ewuzzfpCid9hFkbHS4cLH", "hFINR7Q8QINAcRy5olXj7NbR4xa6PhEpr1AWv6Zm");
+			var product = Parse.Object.extend("product");
+			var query = new Parse.Query(product);
+	      	query.find({
+	      		success: function(object) {
+	      			$(".success").text(object);
+	        		$(".success").show();
+	      		},
+	      		error: function(model, error) {
+	        		$(".error").show();
+	      		}
+	    	});
+  		</script>
+
 	</body>
 </html>
