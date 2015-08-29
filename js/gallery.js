@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	var $graphics = $(".ggraphics").colorbox({rel: "ggraphics"});
+	var photoHeight= $(window).height() - 100;
+
+	var $graphics = $(".ggraphics").colorbox({rel: "ggraphics", height: "100px", scalePhotos: false});
 	$("#graphics a").click(function(e) {
 		e.preventDefault();
 		$graphics.eq(0).click();
