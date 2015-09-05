@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Художня майстерня Гетьман!</title>
-		<meta charset="utf-8" />	
+		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/grids-min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
@@ -10,7 +10,7 @@
 		<div id="main_container">
 			<header>
 				<nav class="pure-g-r" >
-					<div class="pure-u-1-6 nav-item"> 
+					<div class="pure-u-1-6 nav-item">
 						<img src="img/gallery_blue_bg.png" />
 						<a href="index.html">галерея</a>
 					</div>
@@ -35,8 +35,29 @@
 			</header>
 
 			<div id="main_table">
-				<p class="not-not_implemented_yet-yet success" style="display: none;"></p>
-				<p class="not_implemented_yet error" style="display:none;">Error happened.</a>
+				<div class="items success grid" style="display: block;">
+					<div class="grid-item">
+						<img src="https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg" />
+						<p class="name">"Квіти"</p>
+						<p>картина: полотно, олія, 40х40см.</p>
+						<p>Автор: Зоріна Гетьман</p>
+						<div class="action">
+							<span class="price">1500$</span>
+							<span class="buy"><a href="#"><img src="img/insect.png" /> ПРИДБАТИ</a></span>
+						</div>
+					</div>
+					<div class="grid-item">
+						<img src="http://rufflifechicago.com/wp-content/uploads/cat-treats.jpg" />
+						<p class="name">"Пуща Водиця"</p>
+						<p>картина: полотно, олія, 39х36.5см.</p>
+						<p>Автор: Зоріна і Валентин Гетьман</p>
+						<div class="action">
+							<span class="price">1500$</span>
+							<span class="buy"><a href="#"><img src="img/insect.png" /> ПРИДБАТИ</a></span>
+						</div>
+					</div>
+				</div>
+				<p class="shop_error" style="display:none;">Сталася помилка завантаження.</a>
 			</div>
 
 			<footer>
@@ -45,31 +66,31 @@
 						<a href="#">
 							<img src="img/facebook_bg.png" class="social_bg" alt="facebook" />
 							<img src="img/facebook_fg.png" class="social_fg" alt="facebook" />
-						</a>	
+						</a>
 					</div>
 					<div class="social pinterest pure-u-1-5">
 						<a href="#">
 							<img src="img/pinterest_bg.png" class="social_bg" alt="pinterest" />
 							<img src="img/pinterest_fg.png" class="social_fg" alt="pinterest" />
-						</a>	
+						</a>
 					</div>
 					<div class="social behands pure-u-1-5">
 						<a href="#">
 							<img src="img/behands_bg.png" class="social_bg" alt="behands" />
 							<img src="img/behands_fg.png" class="social_fg" alt="behands" />
-						</a>	
+						</a>
 					</div>
 					<div class="social gplus pure-u-1-5">
 						<a href="#">
 							<img src="img/gplus_bg.png" class="social_bg" alt="google plus" />
 							<img src="img/gplus_fg.png" class="social_fg" alt="google plus" />
-						</a>	
+						</a>
 					</div>
 					<div class="social instagram pure-u-1-5">
 						<a href="#">
 							<img src="img/instagram_bg.png" class="social_bg" alt="instagram" />
 							<img src="img/instagram_fg.png" class="social_fg" alt="instagram" />
-						</a>	
+						</a>
 					</div>
 				</div>
 			</footer>
@@ -78,19 +99,27 @@
 
 		<script src="js/jquery.js"></script>
 		<script src="js/parse-1.5.0.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+
 		<script type="text/javascript">
 			Parse.initialize("MbW4yrekRDJBgv4Jso9ewuzzfpCid9hFkbHS4cLH", "hFINR7Q8QINAcRy5olXj7NbR4xa6PhEpr1AWv6Zm");
 			var product = Parse.Object.extend("product");
 			var query = new Parse.Query(product);
 	      	query.find({
 	      		success: function(object) {
-	      			$(".success").text(object);
+	      			// $(".success").text(object);
 	        		$(".success").show();
 	      		},
 	      		error: function(model, error) {
 	        		$(".error").show();
 	      		}
 	    	});
+
+				$('.grid').masonry({
+					itemSelector: '.grid-item',
+				  columnWidth: 200,
+					gutter: 10
+				});
   		</script>
 
 	</body>
