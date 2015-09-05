@@ -68,7 +68,9 @@ p {
 }
 
 .grid {
-	margin-top: 80px;
+	height: 30%;
+	margin-top: 40px;
+	margin-left: 40px;
 }
 
 .grid-item {
@@ -76,6 +78,7 @@ p {
 	border-width: 1px;
 	border-color: black;
 	border-style: solid;
+	margin-bottom: 10px;
 }
 
 .grid-item img {
