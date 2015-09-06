@@ -37,8 +37,17 @@
 			</header>
 
 			<div id="main_table">
-				<div class="items success grid" style="display: none;">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+						<span class="sr-only">100% Complete</span>
+					</div>
 				</div>
+
+				<div class="grid_alert">
+					<div class="alert alert-success" role="alert">Замовлення успішно відправлене. Ми зв'яжемося з Вами якнайшивидше!</div>
+					<div class="alert alert-danger" role="alert">Щось пішло не так. <a id="try_again" class="alert-link">Спробувати ще раз</a> або <a id="сancel_order" class="alert-link">відмінити.</a> </div>
+				</div>
+				<div class="items success grid" style="display: none;"></div>
 				<p class="shop_error" style="display:none;">Сталася помилка завантаження.</a>
 			</div>
 
@@ -112,6 +121,8 @@
 		<script src="js/validator.min.js"></script>
 
 		<script type="text/javascript">
+		  var selectedItem = {};
+
 			Parse.initialize("MbW4yrekRDJBgv4Jso9ewuzzfpCid9hFkbHS4cLH", "hFINR7Q8QINAcRy5olXj7NbR4xa6PhEpr1AWv6Zm");
 			var product = Parse.Object.extend("product");
 			var query = new Parse.Query(product);
@@ -133,7 +144,7 @@
 									<p>" + author + "</p> \
 									<div class=\"action\"> \
 										<span class=\"price\">"+ price +" UAH</span> \
-										<span class=\"buy\"><a href=\"#\" onClick=\"showPopup()\"><img src=\"img/insect.png\" /> ПРИДБАТИ</a></span> \
+										<span class=\"buy\"><a href=\"#\" onClick=\"showPopup(\'" + name + "\',\'" + price + "\', \'" + description + "\', \'" + author + "\', \'" + image + "\')\"><img src=\"img/insect.png\" /> ПРИДБАТИ</a></span> \
 									</div> \
 								</div>";
 
@@ -153,12 +164,25 @@
 	    	});
 
 				$("#make_order_form").validator().on('submit', function(e) {
-					if (!e.isDefaultPrevented) {
+					if (!e.isDefaultPrevented()) {
 						makeOrder();
 					}
 				});
 
-				function showPopup() {
+				$("#try_again").click(function() {
+					$(".alert-danger").fadeOut();
+					makeOrder();
+				});
+				$("#сancel_order").click(function() {
+					$(".alert-danger").fadeOut();
+				});
+
+				function showPopup(name, price, description, author, image) {
+					selectedItem.productName = name;
+					selectedItem.productCost = price;
+					selectedItem.productDescription = description;
+					selectedItem.productAuthor = author;
+					selectedItem.productImage = image;
 					$("#order_form").fadeIn(100);
 					return false;
 				}
@@ -169,7 +193,25 @@
 				}
 
 				function makeOrder() {
-					$("#Order_form").fadeOut(100);
+					selectedItem.name = $("#name").val();
+					selectedItem.phone = $("#phone").val();
+					selectedItem.email = $("#email").val();
+					selectedItem.description = $("#notes").val();
+					$.post("http://getmanstudio.herokuapp.com/order/", selectedItem)
+						.done(function(data) {
+							$(".alert-success").fadeIn();
+							$(".alert-success").delay(2000).fadeOut();
+							$(".alert-danger").fadeOut();
+							$(".progress").fadeOut();
+						})
+						.fail(function(data) {
+							$(".alert-danger").fadeIn();
+							$(".alert-sucess").fadeOut();
+							$(".progress").fadeOut();
+						});
+
+					$(".progress").fadeIn();
+					$("#order_form").fadeOut(100);
 					return false;
 				}
   		</script>

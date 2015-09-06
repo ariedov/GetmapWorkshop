@@ -135,6 +135,15 @@ p {
 	text-decoration: none;
 }
 
+.grid_alert div {
+	margin-top: 100px;
+	display: none;
+}
+
+.progress {
+	display: none;
+}
+
 #gallery #content {
 	position: absolute;
 	top: 61px;
