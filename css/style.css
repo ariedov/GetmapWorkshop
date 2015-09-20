@@ -133,14 +133,11 @@ p {
 .grid-item .buy a {
 	color: #745a13;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .grid_alert div {
 	margin-top: 100px;
-	display: none;
-}
-
-.progress {
 	display: none;
 }
 
