@@ -89,7 +89,7 @@
 		</div>
 
 		<div id="order_form" style="display:none;">
-			<a href="#" class="close" onClick="hidePopup()"><img src="img/close_icon.png" /></a>
+			<a class="close" onClick="hidePopup()"><img src="img/close_icon.png" /></a>
 			<form id="make_order_form" role="form">
 				<div class="form-group">
 					<label for="name">Ім'я:</label>
@@ -129,7 +129,8 @@
 	      	query.find({
 	      		success: function(object) {
 
-							for (var i = 0; i < object.length; ++i) {
+              var views = "";
+							for (var i = object.length - 1; i >= 0; --i) {
 								var item = object[i].attributes;
 								var name = item.name;
 								var price = item.price;
@@ -139,19 +140,22 @@
 								var itemView = "" +
 								"<div class=\"grid-item\"> \
 								<img src=\"" + image + "\" />  \
-								<p class=\"name\">\""+ name + "\"</p> \
+								<p class=\"name\">"+ name + "</p> \
 									<p>" + description + "</p> \
 									<p>" + author + "</p> \
 									<div class=\"action\"> \
 										<span class=\"price\">"+ price +" UAH</span> \
-										<span class=\"buy\"><a href=\"#\" onClick=\"showPopup(\'" + name + "\',\'" + price + "\', \'" + description + "\', \'" + author + "\', \'" + image + "\')\"><img src=\"img/insect.png\" /> ПРИДБАТИ</a></span> \
+										<span class=\"buy\"><a onClick=\"showPopup(\'" + escape(name) + "\',\'" + escape(price) + "\', \'" + escape(description) + "\', \'" + escape(author) + "\', \'" + escape(image) + "\')\"><img src=\"img/insect.png\" /> ПРИДБАТИ</a></span> \
 									</div> \
 								</div>";
 
-								$(".items").append(itemView);
+								views += itemView;
 							}
+							$(".items").append(views);
 	      			// $(".success").text(object);
-	        		$(".success").show();
+	        		$(".success").show(function() {
+								$('.grid').masonry('layout');
+							});
 							$('.grid').masonry({
 								itemSelector: '.grid-item',
 								columnWidth: 200,
@@ -167,6 +171,7 @@
 					if (!e.isDefaultPrevented()) {
 						makeOrder();
 					}
+					return false;
 				});
 
 				$("#try_again").click(function() {
@@ -178,6 +183,7 @@
 				});
 
 				function showPopup(name, price, description, author, image) {
+					hidePopup();
 					selectedItem.productName = name;
 					selectedItem.productCost = price;
 					selectedItem.productDescription = description;
