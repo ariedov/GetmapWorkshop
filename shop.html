@@ -140,7 +140,7 @@
 								var image = item.image;
 								var itemView = "" +
 								"<div class=\"grid-item\"> \
-								<img src=\"" + image + "\" />  \
+								<img class=\"itemimage\" src=\"" + image + "\" />  \
 								<p class=\"name\">"+ name + "</p> \
 									<p>" + description + "</p> \
 									<p>" + author + "</p> \
@@ -149,6 +149,10 @@
 										<span class=\"buy\"><a onClick=\"showPopup(\'" + escape(name) + "\',\'" + escape(price) + "\', \'" + escape(description) + "\', \'" + escape(author) + "\', \'" + escape(image) + "\')\"><img src=\"img/insect.png\" /> ПРИДБАТИ</a></span> \
 									</div> \
 								</div>";
+
+								$(itemView).find(".itemimage").load(function() {
+									$('.grid').masonry('layout');
+								});
 
 								views += itemView;
 							}
