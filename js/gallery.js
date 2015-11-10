@@ -3,8 +3,6 @@ $(document).ready(function() {
 
   var $graphics = $(".ggraphics").colorbox({
     rel: "ggraphics",
-    height: "100px",
-    scalePhotos: false
   });
   $("#graphics a").click(function(e) {
     e.preventDefault();
