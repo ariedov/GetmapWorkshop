@@ -48,7 +48,7 @@ p {
 }
 .workshop_image.visible {}
 #workshop_description p {
-  text-align: left;
+  text-align: justify;
 }
 
 #workshop_description .header {
