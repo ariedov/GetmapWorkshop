@@ -50,6 +50,57 @@ p {
 #workshop_description p {
   text-align: left;
 }
+
+#workshop_description .header {
+  height: 100px;
+}
+
+#workshop_description .header span,
+#workshop_description .header .splat {
+  position: relative;
+}
+
+#workshop_description .header span {
+  top: 80px;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+#workshop_description .header .splat {
+  right: 200px;
+  top: 0;
+  float: right;
+}
+
+#workshop_description .header .splat span {
+  left: 30px;
+  top: 24px;
+  font-size: 14pt;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.line img {
+  left: 450px;
+  width: 500px;
+  position: relative;
+}
+
+.splat {
+  display: inline;
+  position: relative;
+}
+
+.splat img {
+  height: 80px;
+}
+
+.splat img,
+.splat span {
+  position: absolute;
+}
+
+
 #main_container {
   position: absolute;
   top: 0;
