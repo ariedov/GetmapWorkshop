@@ -52,7 +52,7 @@ p {
 }
 
 #workshop_description .header {
-  height: 100px;
+  height: 70px;
 }
 
 #workshop_description .header span,
@@ -61,7 +61,7 @@ p {
 }
 
 #workshop_description .header span {
-  top: 80px;
+  top: 50px;
   font-weight: bold;
 }
 
