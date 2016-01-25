@@ -79,6 +79,10 @@ p {
   font-weight: bold;
 }
 
+.workshop_body {
+  overflow-x: hidden;
+}
+
 .line img {
   left: 450px;
   width: 500px;
