@@ -100,6 +100,23 @@ p {
   position: absolute;
 }
 
+.title .title_name {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.title .title_date {
+  float: right;
+}
+
+.content_item .author {
+  position: relative;
+  left: 650px;
+}
+
+.content_item img {
+  width: 100%;
+}
 
 #main_container {
   position: absolute;
@@ -323,11 +340,17 @@ footer {
 footer #socials {
   margin: 0 auto;
 }
+
 #all_rights_reserved {
   position: absolute;
   bottom: 0;
   font-size: 9pt;
 }
+
+#workshop_all_rights_reserved {
+  font-size: 9pt;
+}
+
 #contacts_footer {
   position: absolute;
   bottom: 0;
