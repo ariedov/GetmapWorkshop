@@ -42,8 +42,8 @@ a:active, a:focus {
   position: relative;
 }
 #workshop_image_container {
-  position: relative;
   height: 220px;
+  position: relative;
 }
 .workshop_image {
   width: 908px;
@@ -73,7 +73,6 @@ a:active, a:focus {
 }
 
 #workshop_description .header .splat {
-  right: 200px;
   top: 0;
   float: right;
 }
@@ -86,14 +85,8 @@ a:active, a:focus {
   font-weight: bold;
 }
 
-.workshop_body {
-  overflow-x: hidden;
-}
-
 .line img {
-  left: 410px;
   width: 500px;
-  position: relative;
 }
 
 .splat {
@@ -120,7 +113,6 @@ a:active, a:focus {
 
 .content_item .author {
   position: relative;
-  left: 630px;
 }
 
 .content_item img {
