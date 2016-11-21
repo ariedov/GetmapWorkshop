@@ -250,19 +250,7 @@ a:active, a:focus {
   margin-top: 22px;
   cursor: pointer;
 }
-header nav {
-  display: block;
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
-header nav {
-  width: 770px;
-}
-header {
-  z-index: 1;
-  position: relative;
-  pointer-events: none;
-}
+
 .nav-item {
   padding-top: 22px;
   position: relative;
