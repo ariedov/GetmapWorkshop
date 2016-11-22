@@ -28,6 +28,14 @@ i.icon-black {
   color: black;
 }
 
+.tabs .indicator {
+  background-color: black !important;
+}
+
+.tabs a {
+  color: black !important;
+}
+
 /* visited link */
 
 a:active, a:focus {
