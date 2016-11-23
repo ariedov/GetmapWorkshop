@@ -1396,6 +1396,16 @@ $(document).ready(function(){
         $tabs_width = $this.width();
         $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links.length;
 
+        // Change url to current tab
+        // window.location.hash = $active.attr('href');
+        $newcontent = $(Materialize.escapeHash(this.hash));
+        if ($newcontent !== undefined) {
+          $newcontent.show();
+          if (typeof(options.onShow) === "function") {
+            options.onShow.call(this, $content);
+          }
+        }
+
         // Make the old tab inactive.
         $active.removeClass('active');
         if ($content !== undefined) {
@@ -1404,7 +1414,6 @@ $(document).ready(function(){
 
         // Update the variables with the new link and content
         $active = $(this);
-        $content = $(Materialize.escapeHash(this.hash));
         $links = $this.find('li.tab a');
         var activeRect = $active.position();
 
@@ -1415,15 +1424,8 @@ $(document).ready(function(){
         if ($index < 0) {
           $index = 0;
         }
-        // Change url to current tab
-        // window.location.hash = $active.attr('href');
 
-        if ($content !== undefined) {
-          $content.show();
-          if (typeof(options.onShow) === "function") {
-            options.onShow.call(this, $content);
-          }
-        }
+        $content = $newcontent;
 
         // Update indicator
 
