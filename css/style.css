@@ -45,6 +45,10 @@ i.icon-black {
   height: 44px;
 }
 
+.parallax-container {
+  height: 100px;
+}
+
 #workshop_image_container {
   height: 220px;
   position: relative;
